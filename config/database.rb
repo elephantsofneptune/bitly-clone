@@ -1,16 +1,16 @@
 # Log queries to STDOUT in development
 if Sinatra::Application.development?
-	ActiveRecord::Base.logger = Logger.new(STDOUT)
+  ActiveRecord::Base.logger = Logger.new(STDOUT)
 end
 
 # Automatically load every file in APP_ROOT/app/models/*.rb, e.g.,
 # autoload "Person", 'app/models/person.rb'
 #
-# See http://www.rubyinside.com/ruby-techniques-revealed-autoload-1652.html
+# See http://www.rubyinside.com/ruby-techniques-rev																																		ealed-autoload-1652.html
 #
 Dir[APP_ROOT.join('app', 'models', '*.rb')].each do |model_file|
-	filename = File.basename(model_file).gsub('.rb', '')
-	autoload ActiveSupport::Inflector.camelize(filename), model_file
+  filename = File.basename(model_file).gsub('.rb', '')
+  autoload ActiveSupport::Inflector.camelize(filename), model_file
 end
 
 # We have to do this in case we have models that inherit from each other.
@@ -33,19 +33,19 @@ DB_NAME = db.path[1..-1]
 #		to :development
 
 if Sinatra::Application.development?
-	ActiveRecord::Base.establish_connection(
-		adapter:	db.scheme == 'postgres' ? 'postgresql' : db.scheme,
-		database:	DB_NAME,
-		encoding:	'utf8'
-	)
+  ActiveRecord::Base.establish_connection(
+    adapter:	db.scheme == 'postgres' ? 'postgresql' : db.scheme,
+    database:	DB_NAME,
+    encoding:	'utf8'
+  )
 else
-	ActiveRecord::Base.establish_connection(
-		adapter:	db.scheme == 'postgres' ? 'postgresql' : db.scheme,
-		host:			db.host,
-		port:			db.port,
-		username:	db.user,
-		password:	db.password,
-		database:	DB_NAME,
-		encoding:	'utf8'
-	)
+  ActiveRecord::Base.establish_connection(
+    adapter:	db.scheme == 'postgres' ? 'postgresql' : db.scheme,
+    host:			db.host,
+    port:			db.port,
+    username:	db.user,
+    password:	db.password,
+    database:	DB_NAME,
+    encoding:	'utf8'
+  )
 end

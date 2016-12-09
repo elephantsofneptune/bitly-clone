@@ -1,0 +1,88 @@
+/*GENERIC*/
+
+p {
+	font-size: 20px;
+}
+
+
+/*BG0 SPECIFICS*/
+/*.bg-0 {
+    background-color: #474e5d;
+}*/
+
+
+/*BG1 SPECIFICS*/
+.bg-1 { 
+    background-color: #1abc9c; /* Green */
+}
+
+.bg-1 h1, p{ 
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+}
+
+.bg-1 h1 { 
+	font-size: 100px;
+}
+
+
+
+/*BG2 SPECIFICS*/
+.bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+}
+
+
+.bg-2 tr, td{ 
+    color: #ffffff;
+}
+
+
+/*BG3 SPECIFICS*/
+.bg-3 p { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+}
+
+/*CONTAINER*/
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+
+/*MAIN*/
+
+/*#nav {
+	padding-top: -100px;
+	padding-bottom: -100px;
+
+}*/
+
+
+
+#main {
+    padding-top: 200px;
+    padding-bottom: 200px;
+	background: url("/img/background3.gif") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#main p {
+	font-size: 20px;
+}
+
+
+/*TABLE*/
+#table {
+	padding-left: 200px;
+	padding-right: 200px;
+
+}
+
+
+/*ABOUT*/
